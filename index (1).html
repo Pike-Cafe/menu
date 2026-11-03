@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Pike Cafe · Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bevan&family=Pacifico&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--n:#14275c;--r:#c8202f;--y:#f7c61a;--yd:#d9a300;--cr:#fff9ec}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:74px}
+body{font-family:'Nunito','Trebuchet MS',sans-serif;color:#1c1c2e;background-color:var(--cr);background-image:radial-gradient(rgba(20,39,92,.07) 2px,transparent 2.5px);background-size:26px 26px}
+.chk{height:16px;background:conic-gradient(var(--n) 25%,#fff 0 50%,var(--n) 0 75%,#fff 0) 0 0/16px 16px}
+.str{height:12px;background:linear-gradient(90deg,var(--r) 33.4%,#fff 0 66.6%,var(--n) 0)}
+header{background:repeating-linear-gradient(90deg,rgba(20,39,92,.3) 0 4px,transparent 4px 30px),var(--y);padding:30px 14px 34px;text-align:center}
+.logo{display:inline-block;background:var(--y);background-image:repeating-linear-gradient(90deg,rgba(20,39,92,.35) 0 4px,transparent 4px 28px);border:8px solid var(--r);border-radius:50%/46%;padding:20px 54px 26px;box-shadow:0 0 0 5px var(--n),9px 10px 0 5px rgba(20,39,92,.35);max-width:100%}
+.the{font-family:'Pacifico',cursive;font-size:2rem;color:var(--n);line-height:1;transform:rotate(-6deg);display:block}
+h1{font-family:'Bevan',Georgia,serif;font-weight:400;font-size:clamp(4rem,17vw,7.5rem);line-height:.95;color:var(--n);text-shadow:4px 4px 0 var(--r),7px 7px 0 #fff}
+.cafe{font-family:'Pacifico',cursive;font-size:clamp(2.4rem,10vw,3.8rem);color:var(--r);line-height:1;display:block;margin-top:-4px;text-shadow:2px 2px 0 #fff}
+.sub{margin-top:16px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--n);font-size:.9rem}
+.info{background:var(--n);color:#fff;text-align:center;padding:16px 14px}
+.info p{margin:3px 0;font-weight:700}
+.info a{color:var(--y);font-weight:800;text-decoration:none}
+.info .big{font-size:1.5rem}
+.pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px}
+.pills span{background:var(--r);padding:5px 14px;border-radius:30px;font-size:.85rem;font-weight:800}
+nav{position:sticky;top:0;z-index:9;display:flex;gap:8px;overflow-x:auto;padding:10px 12px;background:var(--r);border-bottom:4px solid var(--n);scrollbar-width:none}
+nav a{flex:0 0 auto;text-decoration:none;font-weight:800;padding:7px 15px;border-radius:30px;background:#fff;color:var(--n);white-space:nowrap}
+nav a:nth-child(3n+2){background:var(--y)}nav a:nth-child(3n+3){background:var(--n);color:#fff}
+nav a:hover,nav a:focus-visible{outline:3px solid #fff}
+.lang{position:sticky;left:0;z-index:2;display:flex;gap:4px;flex:0 0 auto;background:var(--r);padding-right:8px}
+.lang button{border:2px solid #fff;background:transparent;color:#fff;font:inherit;font-weight:800;padding:5px 12px;border-radius:30px;cursor:pointer}
+.lang button[aria-pressed=true]{background:#fff;color:var(--r)}
+main{max-width:1100px;margin:0 auto;padding:6px 14px 40px}
+section{margin-top:36px}
+h2{font-family:'Bevan',Georgia,serif;font-weight:400;font-size:clamp(1.7rem,6vw,2.5rem);text-align:center;color:var(--n);text-shadow:2px 2px 0 var(--y)}
+h2::after{content:"★ ★ ★";display:block;color:var(--r);font-size:1rem;letter-spacing:.5em;margin:4px 0 16px;text-shadow:none}
+.cols{columns:2 340px;column-gap:22px}
+.cd{break-inside:avoid;background:#fff;border:3px solid var(--k);border-radius:16px;margin:0 0 20px;box-shadow:6px 6px 0 var(--k);overflow:hidden}
+.cd:nth-child(3n+1){--k:var(--n);--kt:#fff}.cd:nth-child(3n+2){--k:var(--r);--kt:#fff}.cd:nth-child(3n+3){--k:var(--yd);--kt:var(--n)}
+.cd:nth-child(3n+3) h3{background:var(--y)}
+.cd h3{background:var(--k);color:var(--kt);font-family:'Bevan',Georgia,serif;font-weight:400;font-size:1.25rem;padding:10px 16px;letter-spacing:.02em}
+.nt{padding:9px 16px 2px;font-size:.88rem;font-style:italic;color:#4a4a63}
+.it{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 16px;border-bottom:1px dashed #d8d2bd}
+.it:last-child{border-bottom:0}
+.nm{font-weight:800}.ds{font-size:.85rem;color:#4a4a63;margin-top:1px}
+.pw{display:flex;flex-direction:column;gap:4px;align-items:flex-end}
+.pr{display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end}
+.ch{display:flex;flex-direction:column;align-items:center;min-width:48px;background:#fff1c2;border-radius:10px;padding:2px 8px;white-space:nowrap}
+.ch i{font-style:normal;font-size:.66rem;font-weight:800;color:var(--n);text-transform:uppercase}
+.ch b{color:var(--r);font-size:.95rem}
+footer{background:var(--n);color:#fff;text-align:center;padding:26px 16px 30px}
+footer h2{color:#fff;text-shadow:2px 2px 0 var(--r)}
+footer a{color:var(--y);font-weight:800;text-decoration:none}
+.fine{font-size:.78rem;max-width:640px;margin:14px auto 0;opacity:.8}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="chk"></div>
+<header>
+  <div class="logo"><span class="the">The</span><h1>PIKE</h1><span class="cafe">Cafe</span></div>
+  <p class="sub" data-es="Reading, PA · Comida americana de siempre">Reading, PA · American Favorites</p>
+</header>
+<div class="str"></div>
+<div class="info">
+  <p class="big"><a href="tel:6103736616">610-373-6616</a></p>
+  <p><a href="https://www.google.com/maps/search/?api=1&amp;query=930+Pike+Street+Reading+PA">930 Pike Street · Reading, PA</a> · <a href="https://www.pikecafe.com">www.pikecafe.com</a></p>
+  <div class="pills">
+    <span data-es="Comedor exterior de temporada">Seasonal outdoor dining</span>
+    <span data-es="Pedidos en línea">Online ordering available</span>
+    <span data-es="Tarjetas de regalo">Gift cards available</span>
+  </div>
+</div>
+<div class="chk"></div>
+<nav id="nav"></nav>
+<main id="menu"></main>
+<div class="str"></div>
+<footer>
+  <h2 data-es="¡Gracias por visitarnos!">Thanks for stopping by!</h2>
+  <p><a href="tel:6103736616">610-373-6616</a> · Fax 610-375-6634</p>
+  <p data-es="Se agrega 20% de propina a grupos de 5 o más · Cajero automático en el local · Aceptamos todas las tarjetas de crédito principales">20% gratuity added to parties of five (5) or more · ATM on site · All major credit cards accepted</p>
+  <p class="fine" data-es="Consumir carnes, aves, mariscos, huevos o moluscos crudos o poco cocidos puede aumentar el riesgo de enfermedades transmitidas por alimentos, especialmente si tiene ciertas condiciones médicas.">Consuming raw or undercooked meat, seafood, poultry, eggs or shellfish may increase your risk of foodborne illness, especially if you have certain medical conditions.</p>
+</footer>
+<div class="chk"></div>
+
+<script>
+const z=(a,b)=>[a,b];
+const D=[
+{id:"week",ic:"⭐",t:z("Daily Specials","Especiales de la Semana"),g:[
+ {n:z("Every Day of the Week","Cada Día de la Semana"),note:z("Plus daily lunch & dinner specials. Soup du Jour: made fresh every day, ask your server.","Además especiales diarios de almuerzo y cena. Sopa del día: hecha cada día, pregunta a tu mesero."),i:[
+  [z("Monday","Lunes"),"",z("Beer & Burger Night · Lager / Miller Lite special","Noche de Cerveza y Hamburguesa · Especial de Lager / Miller Lite")],
+  [z("Tuesday","Martes"),"",z("Lobster Roll & Steamed Clams Night · Lager / Miller Lite special","Noche de Lobster Roll y Almejas al Vapor · Especial de Lager / Miller Lite")],
+  [z("Wednesday","Miércoles"),"",z("Wing Night · Miller Lite special","Noche de Alitas · Especial de Miller Lite")],
+  [z("Thursday","Jueves"),"",z("Steak Night · Coors Light special","Noche de Steak · Especial de Coors Light")],
+  [z("Friday","Viernes"),"",z("Lunch & dinner features · Labatt Blue special","Especiales de almuerzo y cena · Especial de Labatt Blue")],
+  [z("Saturday","Sábado"),"",z("Lunch & dinner features · Coors Light special","Especiales de almuerzo y cena · Especial de Coors Light")],
+  [z("Sunday","Domingo"),"",z("Lunch & dinner features · Miller Lite special","Especiales de almuerzo y cena · Especial de Miller Lite")]]}]},
+{id:"apps",ic:"🍤",t:z("Appetizers","Aperitivos"),g:[
+ {n:z("Starters","Para Empezar"),i:[
+  ["Pike Crispy Shrimp","11.99",z("House-breaded shrimp deep fried to a golden brown, with bang bang sauce","Camarones empanizados en casa, fritos y dorados, con salsa bang bang")],
+  ["Bruschetta","9.99",z("Maine tomatoes, scallions, garlic and seasonings marinated in Modena balsamic and olive oil, topped with Asiago, with grilled Ciabatta","Tomates, cebollín y ajo marinados en balsámico de Modena y aceite de oliva, con queso Asiago y pan Ciabatta a la parrilla")],
+  [z("Blackened Scallop & Shrimp Bowl","Bowl de Vieiras y Camarones Ennegrecidos"),"14.99",z("Blackened shrimp & bay scallops with bruschetta tomatoes in house-made cheese sauce, Asiago, grilled ciabatta","Camarones y vieiras ennegrecidos con tomates bruschetta en salsa de queso casera, Asiago y ciabatta a la parrilla")],
+  [z("Tortilla Chips & Salsa","Totopos con Salsa"),"6.99",z("Add cheese + $2.50","Con queso + $2.50")],
+  ["Nacho Grande","Ground Beef 12.99|Chicken 12.99",z("Fresh corn tortilla chips, black olives, cheddar cheese sauce, house-made salsa, jalapeños, sour cream. Choose ground beef or Bell & Evans seasoned chicken","Totopos de maíz frescos, aceitunas negras, salsa de cheddar, salsa casera, jalapeños y crema. Elige carne molida o pollo Bell & Evans sazonado")],
+  ["Seafood Nacho Grande","15.99",z("Bay shrimp, crab & bay scallops with cheese sauce, salsa, black olives & jalapeño, sour cream on the side","Camarones, cangrejo y vieiras con salsa de queso, salsa, aceitunas negras y jalapeño, crema aparte")],
+  ["Pike Calamari","13.99",z("Mediterranean seasoned calamari, deep fried with grape tomatoes & baby spinach, sweet chili sauce","Calamar sazonado estilo mediterráneo, frito con tomates uva y espinaca, con salsa dulce de chile")],
+  ["Pike Crab Dip","13.99",z("Baked lump crabmeat with parmesan cream cheese & spices, house-made tortilla chips, salsa & sour cream","Cangrejo horneado con queso crema parmesano y especias, totopos caseros, salsa y crema")],
+  [z("Mozzarella Sticks","Palitos de Mozzarella"),"8.99"],
+  [z("Onion Rings","Aros de Cebolla"),"9.99",z("With Santa Fe sauce","Con salsa Santa Fe")],
+  [z("Chicken Fingers","Dedos de Pollo"),"8.99",z("With BBQ sauce · add fries + $1.99","Con salsa BBQ · con papas + $1.99")],
+  [z("Wisconsin White Cheddar Cheese Curds","Cuajos de Queso Cheddar de Wisconsin"),"10.99",z("Beer-battered, topped with toasted almonds & honey drizzle","Empanizados con cerveza, con almendras tostadas y miel")],
+  ["Slammin’ Brussels","10.99",z("Deep-fried brussels sprouts with Asiago, crumbled bacon & balsamic drizzle","Coles de Bruselas fritas con Asiago, tocino y balsámico")]]}]},
+{id:"wings",ic:"🍗",t:z("Wings","Alitas"),g:[
+ {n:z("World Famous Pike Cafe Wings","Las Famosas Alitas de Pike Cafe"),note:z("Your choice of sauce, with carrots & celery. All drums or all flats + $1.00.","Con la salsa que elijas. Solo piernitas o solo alitas + $1.00."),i:[
+  [z("Wings","Alitas"),"6 pc 8.99|12 pc 13.99"],
+  ["Chicago-Style Wings","+2.00",z("Served on a bed of fries, topped with your choice of extra sauce","Sobre una cama de papas, con tu salsa extra favorita")],
+  ["Tots-Style Wings","+3.00",z("Served on a bed of tater tots, topped with your choice of extra sauce","Sobre una cama de tater tots, con tu salsa extra favorita")]]},
+ {n:z("Choose Your Sauce","Elige tu Salsa"),note:z("Naked · Mild · Hot · Tough Guy (really hot) · Sriracha Ranch · Santa Fe · Cajun · Spicy Honey Mustard · Soy Garlic · Old Bay · Teriyaki · Lemon Pepper · Montreal · Parmesan Peppercorn · Parmigiano · BBQ. Additional sauce + $0.50. Split sauces on one dozen only.","Natural · Suave · Picante · Tough Guy (muy picante) · Sriracha Ranch · Santa Fe · Cajún · Miel Mostaza Picante · Soya con Ajo · Old Bay · Teriyaki · Limón con Pimienta · Montreal · Parmesano con Pimienta · Parmigiano · BBQ. Salsa adicional + $0.50. Salsas divididas solo en la docena."),i:[]}]},
+{id:"fries",ic:"🍟",t:z("World Famous Fries","Papas Famosas"),g:[
+ {n:z("Fresh Cut Fries","Papas Frescas"),note:z("Substitute for an extra $1.00 on any sandwich or burger.","Cámbialas por $1.00 extra en cualquier sándwich o hamburguesa."),i:[
+  ["Truffle Fries","10.99",z("Topped with shaved parmesan, scallions & a drizzle of truffle aioli","Con parmesano rallado, cebollín y alioli de trufa")],
+  ["Thai Fries","10.99",z("Topped with Thai cheese, scallions & a drizzle of Thai aioli","Con queso Thai, cebollín y alioli Thai")],
+  ["Pike Fries","8.99",z("Fried onions, house-made salsa & melted cheese sauce","Cebolla frita, salsa casera y salsa de queso derretido")],
+  ["Big Bowl Fries","5.99"],["Cheese Fries","6.99"],["Old Bay Fries","6.59"],["Cajun Fries","6.59"]]},
+ {n:z("Add Protein to Any Fries","Agrega Proteína a tus Papas"),i:[
+  [z("Bell & Evans Chicken Breast","Pechuga de Pollo Bell & Evans"),"6.99"],["Steak","7.99"],[z("Shrimp","Camarones"),"7.99"]]}]},
+{id:"salads",ic:"🥗",t:z("House Specialty Salads","Ensaladas de la Casa"),g:[
+ {n:z("Salads","Ensaladas"),i:[
+  [z("Grilled Blackened Chicken Salad","Ensalada de Pollo Ennegrecido"),"15.99",z("Mixed greens, dried cranberries, candied walnuts, grape tomatoes, cucumbers, goat cheese & Asian habanero ginger vinaigrette, with Bell & Evans blackened chicken","Mezcla de lechugas, arándanos secos, nueces confitadas, tomates uva, pepino, queso de cabra y vinagreta asiática de habanero y jengibre, con pollo Bell & Evans ennegrecido")],
+  [z("Crispy Chicken Salad","Ensalada de Pollo Crujiente"),"13.99",z("Mixed greens, avocado, tomatoes, red onion, bacon, Monterey Jack cheddar, crispy tortilla strips & fried chicken strips, honey mustard on the side","Lechugas, aguacate, tomates, cebolla morada, tocino, queso Monterey Jack, tiras de tortilla y tiras de pollo frito, con aderezo de miel mostaza")],
+  [z("Caesar Salad","Ensalada César"),"8.99",z("Romaine, Asiago, parmesan & croutons tossed in Caesar dressing","Lechuga romana, Asiago, parmesano y crutones con aderezo César")],
+  ["Pike’s Green Goddess Salad","10.99",z("Mixed greens, bacon, hard-boiled egg, avocado, tomatoes, red onion, cucumbers & carrots, green goddess dressing on the side","Lechugas, tocino, huevo cocido, aguacate, tomates, cebolla morada, pepino y zanahoria, con aderezo green goddess")]]},
+ {n:z("Add to Any Salad","Agrega a tu Ensalada"),note:z("Dressings: house vinaigrette, bleu cheese, honey mustard, Asian sesame ginger, parmesan peppercorn, ranch, French, Russian, creamy Italian, Caesar, balsamic vinaigrette, oil & vinegar.","Aderezos: vinagreta de la casa, queso azul, miel mostaza, sésamo y jengibre asiático, parmesano con pimienta, ranch, francés, ruso, italiano cremoso, César, vinagreta balsámica, aceite y vinagre."),i:[
+  [z("Bell & Evans Grilled Chicken Breast","Pechuga de Pollo a la Parrilla Bell & Evans"),"6.99"],["Steak","7.99"],[z("Shrimp","Camarones"),"7.99"],[z("Petite Lump Crab Cake","Pastelito de Cangrejo"),"8.99"],[z("Salmon","Salmón"),"8.99"],[z("Blackened","Ennegrecido"),"0.50"]]}]},
+{id:"burgers",ic:"🍔",t:z("Pike Burgers","Hamburguesas Pike"),g:[
+ {n:z("Signature Burgers","Hamburguesas de la Casa"),note:z("All 8 oz certified Black Angus brisket burgers, with fresh cut fries or potato chips and a pickle. Substitute tots + $1.00 · gluten-free bun + $1.99.","Todas son de 8 oz de res Black Angus certificada, con papas frescas o papitas y un pepinillo. Cambia por tots + $1.00 · pan sin gluten + $1.99."),i:[
+  ["Crabby Patty","17.99",z("Boursin cheese, lump crabmeat, sundried tomatoes, caramelized onions, baby spinach & melted provolone","Queso Boursin, cangrejo, tomates secos, cebolla caramelizada, espinaca y provolone derretido")],
+  ["Brunch Burger","15.99",z("Sunny side up egg, bacon, caramelized onions, sautéed mushrooms & provolone","Huevo estrellado, tocino, cebolla caramelizada, champiñones salteados y provolone")],
+  ["Berks BBQ Burger","15.99",z("Bacon, sautéed peppers, Monterey Jack cheddar, caramelized onions & BBQ sauce","Tocino, pimientos salteados, queso Monterey Jack, cebolla caramelizada y salsa BBQ")],
+  ["The Alamo Burger","15.99",z("Jalapeños, avocado, Monterey Jack cheddar, caramelized onions & Worcestershire aioli","Jalapeños, aguacate, queso Monterey Jack, cebolla caramelizada y alioli de Worcestershire")],
+  ["’Shroom Burger","15.99",z("Swiss cheese, wild mushrooms & truffle aioli","Queso suizo, hongos silvestres y alioli de trufa")]]},
+ {n:z("Build Your Own Burger!!","¡Arma tu Propia Hamburguesa!"),note:z("Grilled to your liking. Choose from: lettuce, tomato, raw or fried onions, banana peppers, jalapeños, wild mushrooms. Substitute grilled or fried chicken.","A tu término. Elige entre: lechuga, tomate, cebolla cruda o frita, chiles banana, jalapeños, hongos silvestres. Cambia por pollo a la parrilla o frito."),i:[
+  [z("Build Your Own Burger","Arma tu Hamburguesa"),"13.99"],
+  [z("Egg, Boursin, cheddar, fresh mozzarella, bleu cheese, Swiss, Monterey Jack, provolone","Huevo, Boursin, cheddar, mozzarella fresca, queso azul, suizo, Monterey Jack, provolone"),"1.00"],
+  [z("Tavern ham, bacon, pulled pork","Jamón, tocino, cerdo desmenuzado"),"1.50"],[z("Avocado","Aguacate"),"0.75"]]}]},
+{id:"sandwiches",ic:"🥪",t:z("Sandwiches & Wraps","Sándwiches y Wraps"),g:[
+ {n:z("Pike Sandwiches & Wraps","Sándwiches y Wraps Pike"),note:z("All served with fresh cut fries or potato chips and a pickle. Substitute tots + $1.00 · gluten-free bun + $1.99.","Se sirven con papas frescas o papitas y un pepinillo. Cambia por tots + $1.00 · pan sin gluten + $1.99."),i:[
+  ["Chicken Bruschetta","13.99",z("Char-grilled Bell & Evans chicken, house-made bruschetta, lettuce & Asiago, balsamic drizzle","Pollo Bell & Evans a la parrilla, bruschetta casera, lechuga y Asiago, con balsámico")],
+  ["Grilled Blackened Chicken Supreme","13.99",z("Blackened chicken breast with lump crab meat & provolone on a brioche roll","Pechuga ennegrecida con cangrejo y provolone en pan brioche")],
+  ["Nashville Hot Crispy Chicken Sandwich","10.99",z("Deep-fried chicken breast with sweet pickles, coleslaw & Nashville hot sauce","Pechuga de pollo frita con pepinillos dulces, ensalada de col y salsa Nashville picante")],
+  [z("Cheesesteak or Chicken Cheesesteak","Cheesesteak o Cheesesteak de Pollo"),"13.99",z("Thinly sliced rib eye or Bell & Evans chicken, marinara & American cheese on a hoagie roll","Rib eye en rebanadas finas o pollo Bell & Evans, marinara y queso americano en pan hoagie")],
+  ["Pike Famous Crab Cake Sandwich","16.99",z("5 oz fried or broiled lump crab cake, lettuce, tomato, tartar or cocktail sauce, brioche roll","Pastel de cangrejo de 5 oz frito o a la parrilla, lechuga, tomate, salsa tártara o cóctel, pan brioche")],
+  ["World Famous Fish Sandwich","13.99",z("8 oz New England style haddock filet, deep fried, on toasted Ciabatta with lettuce, tomato & tartar sauce","Filete de eglefino de 8 oz estilo Nueva Inglaterra, frito, en ciabatta tostada con lechuga, tomate y salsa tártara")],
+  ["Pulled Pork BBQ Sandwich","10.99",z("Slow roasted pork, caramelized onions, bell peppers, sweet & spicy BBQ sauce & Monterey Jack cheddar on a brioche roll","Cerdo asado lento, cebolla caramelizada, pimientos, salsa BBQ dulce y picante y queso Monterey Jack en pan brioche")],
+  ["Smoky Dutchman Sandwich","14.99",z("Pastrami, smoked Gouda & Jamin’ Lager onion mustard on grilled marbled rye","Pastrami, Gouda ahumado y mostaza con cebolla y cerveza lager en pan centeno a la parrilla")],
+  ["Bacon Chicken Ranch Wrap","12.99",z("Sliced chicken breast, chopped bacon, lettuce, ranch & melted American cheese","Pechuga de pollo en rebanadas, tocino, lechuga, ranch y queso americano derretido")],
+  ["Crispy BBQ Chicken Wrap","10.99",z("Golden fried chicken tenders, crispy tortilla strips, lettuce, Monterey Jack cheddar & BBQ sauce","Tiras de pollo fritas, tiras de tortilla crujientes, lechuga, queso Monterey Jack y salsa BBQ")],
+  ["Thai Chicken Wrap","12.99",z("Sliced chicken breast, Thai cheese, cashews, shredded carrots, romaine & sweet chili Thai aioli","Pechuga de pollo, queso Thai, nueces de la India, zanahoria, lechuga romana y alioli Thai de chile dulce")],
+  ["Vegan Sausage Wrap","13.99",z("Vegan sausage, marinara, romaine, tomatoes, bell peppers & caramelized onions","Salchicha vegana, marinara, lechuga romana, tomates, pimientos y cebolla caramelizada")]]}]},
+{id:"tex",ic:"🌮",t:z("Fajitas & Quesadillas","Fajitas y Quesadillas"),g:[
+ {n:z("Pike Sizzling Fajitas","Fajitas Pike"),note:z("Seasoned grilled bell peppers & onions served sizzling with warm flour tortillas, shredded lettuce, house-made salsa, sour cream & Monterey Jack cheddar.","Pimientos y cebolla sazonados a la parrilla, servidos chisporroteando con tortillas de harina calientes, lechuga, salsa casera, crema y queso Monterey Jack."),i:[
+  [z("Steak Fajita","Fajita de Steak"),"18.99"],[z("Bell & Evans Grilled Chicken Fajita","Fajita de Pollo Bell & Evans"),"18.99"],[z("Pulled Pork Fajita","Fajita de Cerdo Desmenuzado"),"17.99"],[z("Gulf Shrimp Fajita","Fajita de Camarones del Golfo"),"18.99"],[z("Combine any two","Combina cualquier dos"),"8.99",z("Additional","Adicional")]]},
+ {n:z("Pike Ultimate Quesadillas","Quesadillas Pike"),note:z("Grilled flour tortillas layered with Monterey Jack cheddar and fajita-style peppers & onions, with house-made salsa & sour cream.","Tortillas de harina a la parrilla con queso Monterey Jack y pimientos y cebolla estilo fajita, con salsa casera y crema."),i:[
+  [z("Steak Quesadilla","Quesadilla de Steak"),"13.99"],[z("Shaved Chicken Quesadilla","Quesadilla de Pollo Deshebrado"),"12.99"],[z("Pulled Pork Quesadilla","Quesadilla de Cerdo Desmenuzado"),"12.99"],[z("Bay Shrimp Quesadilla","Quesadilla de Camarones"),"13.99"],[z("Cheese Quesadilla","Quesadilla de Queso"),"10.99"],[z("Veggie Quesadilla","Quesadilla Vegetariana"),"11.99"]]}]},
+{id:"entrees",ic:"🥩",t:z("Entrées","Platos Fuertes"),g:[
+ {n:z("Entrées","Platos Fuertes"),note:z("All entrées served with a house salad & 2 sides. Rolls with butter available upon request.","Todos incluyen ensalada de la casa y 2 acompañantes. Pan con mantequilla disponible si lo pides."),i:[
+  [z("Seasonal Entrée: Chicken & Ribs","Plato de Temporada: Pollo y Costillas"),"22.99",z("Grilled Bell & Evans chicken breast & half rack of ribs, spicy honey BBQ sauce, corn bread","Pechuga de pollo a la parrilla y media rack de costillas, salsa BBQ de miel picante, pan de maíz")],
+  [z("Char-Grilled Delmonico","Delmonico a la Parrilla"),["Market Price","Precio de mercado"],z("14 oz Certified Angus Beef Delmonico, demi-glace, sautéed wild mushrooms & caramelized onions","Delmonico de res Angus certificada de 14 oz, demi-glace, hongos salteados y cebolla caramelizada")],
+  [z("World Famous Lump Crab Cakes","Famosos Pasteles de Cangrejo"),"Two 27.99|One 18.99",z("5 oz broiled or fried lump crab cakes","Pasteles de cangrejo de 5 oz asados o fritos")],
+  [z("Char-Grilled Filet Mignon","Filete Mignon a la Parrilla"),"24.99",z("6 oz Certified Angus Beef filet with demi-glace · add wild mushrooms + $1.50 · add caramelized onions + $1.50","Filete Angus de 6 oz con demi-glace · agrega hongos + $1.50 · agrega cebolla caramelizada + $1.50")],
+  ["Mahi-Mahi","18.99",z("6 oz seasoned & blackened, topped with fresh pineapple salsa","6 oz sazonado y ennegrecido, con salsa fresca de piña")]]}]},
+{id:"pasta",ic:"🍝",t:z("Pike’s Italian Corner","Rincón Italiano de Pike"),g:[
+ {n:z("Pasta","Pastas"),note:z("All pasta served with a house salad and garlic bread.","Todas las pastas incluyen ensalada de la casa y pan de ajo."),i:[
+  ["Pike Grilled Blackened Chicken Penne Caprese","19.99",z("Penne with Bell & Evans blackened chicken, fresh herbs, garlic & olive oil","Penne con pollo Bell & Evans ennegrecido, hierbas frescas, ajo y aceite de oliva")],
+  ["Chicken Parmesan Aglio e Olio","19.99",z("Breaded-to-order chicken breast with marinara & mozzarella over linguini in garlic & fresh herbs, dusted with parmesan","Pechuga empanizada con marinara y mozzarella sobre linguini con ajo y hierbas, con parmesano")],
+  ["Pike Pasta","10.99",z("Penne or linguini with marinara or Alfredo sauce","Penne o linguini con salsa marinara o Alfredo")]]},
+ {n:z("Add to Any Pasta","Agrega a tu Pasta"),i:[
+  [z("Bell & Evans Grilled Chicken Breast","Pechuga de Pollo a la Parrilla"),"6.99"],["Steak","7.99"],[z("Shrimp","Camarones"),"7.99"],[z("Lump Crab Meat","Carne de Cangrejo"),"9.99"],[z("Vegan Sausage","Salchicha Vegana"),"5.99"]]}]},
+{id:"pizza",ic:"🍕",t:z("Pike Pizza","Pizza Pike"),g:[
+ {n:z("Pizza Pies","Pizzas"),i:[
+  ["Traditional Pizza Pie","Personal 10.99|Large 15.99",z("Pizza sauce & mozzarella cheese","Salsa de pizza y mozzarella")],
+  [z("White Vegetarian Pizza","Pizza Blanca Vegetariana"),"Personal 10.99|Large 17.99",z("Spinach, tomato, olive oil & fresh garlic with mozzarella","Espinaca, tomate, aceite de oliva y ajo fresco con mozzarella")],
+  [z("Vegan Pizza","Pizza Vegana"),"Personal 16.99|Large 23.99",z("Artichoke hearts, vegan sausage, mushrooms, Roma tomatoes & marinara","Alcachofas, salchicha vegana, champiñones, tomates Roma y marinara")],
+  ["Meat-Lovers Pizza","Personal 12.99|Large 19.99",z("Pepperoni, bacon, meatballs, ham, sausage, pizza sauce & mozzarella","Pepperoni, tocino, albóndigas, jamón, salchicha, salsa de pizza y mozzarella")],
+  ["Cuban Pizza","Personal 12.99|Large 19.99",z("Thinly sliced ham, pulled pork, pickles, Dijon aioli, Swiss & mozzarella","Jamón en rebanadas finas, cerdo desmenuzado, pepinillos, alioli de Dijon, queso suizo y mozzarella")]]},
+ {n:z("Pizza Toppings","Ingredientes Extra"),note:z("Extra cheese, pizza sauce, pepperoni, mushrooms, sweet Italian sausage, ham, onions, bell peppers, pineapple, black olives, jalapeños, meatballs, banana peppers.","Queso extra, salsa de pizza, pepperoni, champiñones, salchicha italiana dulce, jamón, cebolla, pimientos, piña, aceitunas negras, jalapeños, albóndigas y chiles banana."),i:[
+  [z("Per topping","Por ingrediente"),"Personal 0.89|Large 2.29"]]}]},
+{id:"stromboli",ic:"🥟",t:z("Personal Pike Stromboli","Stromboli Personal Pike"),g:[
+ {n:"Stromboli",note:z("Made to order, please allow 20 minutes. No custom strombolis. All served with mozzarella & provolone and a side of marinara. $0.89 for additional toppings. We do not make large strombolis.","Hechos al momento, espera unos 20 minutos. No se personalizan. Todos con mozzarella y provolone y marinara aparte. $0.89 por ingrediente adicional. No hacemos strombolis grandes."),i:[
+  ["Cheesesteak Stromboli","12.99",z("Chipped steak, onions, bell peppers, provolone & mozzarella","Steak en tiras, cebolla, pimientos, provolone y mozzarella")],
+  ["Meat-Lovers Stromboli","12.99",z("Pepperoni, bacon, meatballs, ham, sweet Italian sausage, provolone & mozzarella","Pepperoni, tocino, albóndigas, jamón, salchicha italiana, provolone y mozzarella")],
+  ["Bacon Chicken Ranch Stromboli","12.99",z("Bell & Evans sliced chicken breast, bacon, ranch, provolone & mozzarella","Pollo Bell & Evans, tocino, ranch, provolone y mozzarella")],
+  ["Cuban Stromboli","12.99",z("Thinly sliced ham, pulled pork, pickles, Dijon aioli, Swiss & mozzarella","Jamón, cerdo desmenuzado, pepinillos, alioli de Dijon, queso suizo y mozzarella")]]}]},
+{id:"kids",ic:"🧒",t:z("Little Pikers","Pequeños Pikers"),g:[
+ {n:z("For Children 12 and Under","Para Niños de 12 Años o Menos"),note:z("$7.99 each · includes a soft drink","$7.99 cada uno · incluye un refresco"),i:[
+  [z("Mac n’ Cheese & Applesauce","Mac n’ Cheese y Puré de Manzana")],[z("Grilled Cheese & Fries","Sándwich de Queso a la Plancha y Papas")],[z("Chicken Fingers & Fries","Dedos de Pollo y Papas")],[z("Twin Mini Cheeseburgers & Fries","Dos Mini Hamburguesas con Queso y Papas")],[z("Spaghetti & Mini Meatball","Espagueti y Mini Albóndiga")],[z("Personal Cheese Pizza","Pizza Personal de Queso")]]}]},
+{id:"desserts",ic:"🍨",t:z("Delectable Desserts","Postres Deliciosos"),g:[
+ {n:z("Sweet Endings","Dulce Final"),note:z("Ask about today’s featured dessert!","¡Pregunta por el postre del día!"),i:[
+  [z("Scoop of Vanilla Bean Ice Cream","Bola de Helado de Vainilla")],
+  ["Funnel Sticks","",z("Carnival-style funnel sticks topped with powdered sugar","Palitos de funnel cake estilo feria con azúcar glas")],
+  ["Pike Sundae","",z("Vanilla ice cream atop funnel sticks, chocolate syrup, whipped cream & a cherry","Helado de vainilla sobre palitos funnel, chocolate, crema batida y una cereza")],
+  [z("House-Made Warm Skillet Chocolate Chip Cookie Sundae","Sundae de Galleta de Chocolate Caliente en Sartén"),"",z("Takes 10 minutes, but worth the wait! Vanilla ice cream, caramel, chocolate syrup & whipped cream","¡Tarda 10 minutos, pero vale la espera! Helado de vainilla, caramelo, chocolate y crema batida")]]}]}
+];
+const LB={"6 pc":"6 pz","12 pc":"12 pz",Personal:"Personal",Large:"Grande",Two:"Dos",One:"Uno",Chicken:"Pollo","Ground Beef":"Carne Molida"};
+let L='en';try{L=localStorage.getItem('lang')||(/^es/i.test(navigator.language)?'es':'en')}catch(e){}
+const tx=x=>typeof x==='string'?x:x[L==='es'?1:0];
+const lb=l=>L==='es'&&LB[l]?LB[l]:l;
+function pr(s){
+ if(Array.isArray(s))return `<div class="pr"><span class="ch"><b>${tx(s)}</b></span></div>`;
+ return `<div class="pr">${s.split('|').map(x=>{const k=x.lastIndexOf(' ');const v=x.slice(k+1);return `<span class="ch">${k>0?`<i>${lb(x.slice(0,k))}</i>`:''}<b>${v[0]==='+'?'+$'+v.slice(1):'$'+v}</b></span>`}).join('')}</div>`}
+function draw(){
+ document.documentElement.lang=L;
+ document.title=L==='es'?'The Pike Cafe · Menú':'The Pike Cafe · Menu';
+ document.querySelectorAll('[data-es]').forEach(e=>{if(!e.dataset.en)e.dataset.en=e.innerHTML;e.innerHTML=L==='es'?e.dataset.es:e.dataset.en});
+ const nav=document.getElementById('nav'),m=document.getElementById('menu');
+ nav.innerHTML=`<div class="lang"><button data-l="en" aria-pressed="${L==='en'}">EN</button><button data-l="es" aria-pressed="${L==='es'}">ES</button></div>`+D.map(s=>`<a href="#${s.id}">${s.ic} ${tx(s.t)}</a>`).join('');
+ m.innerHTML=D.map(s=>`<section id="${s.id}"><h2>${s.ic} ${tx(s.t)}</h2><div class="cols">`+s.g.map(g=>`<div class="cd"><h3>${tx(g.n)}</h3>${g.note?`<p class="nt">${tx(g.note)}</p>`:''}`+g.i.map(i=>`<div class="it"><div><div class="nm">${tx(i[0])}</div>${i[2]?`<div class="ds">${tx(i[2])}</div>`:''}</div>${i[1]?`<div class="pw">${pr(i[1])}</div>`:''}</div>`).join('')+`</div>`).join('')+`</div></section>`).join('');
+}
+document.getElementById('nav').addEventListener('click',e=>{const b=e.target.closest('button[data-l]');if(b){L=b.dataset.l;try{localStorage.setItem('lang',L)}catch(x){}draw()}});
+draw();
+</script>
+</body>
+</html>
